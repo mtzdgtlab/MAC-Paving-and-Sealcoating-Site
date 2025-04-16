@@ -1,0 +1,32 @@
+User-agent: *
+# Permitir indexación de páginas clave
+Allow: /index.html
+Allow: /contact.html
+Allow: /services/
+Allow: /services/asphalt-paving/
+Allow: /services/concrete/
+Allow: /services/landscaping/
+Allow: /services/pavers/
+Allow: /services/sealer/
+
+# Bloquear carpetas de recursos estáticos
+Disallow: /assets/css/
+Disallow: /assets/js/
+Disallow: /assets/fonts/
+Disallow: /assets/imgs/
+Disallow: /assets/favicon/
+
+# Bloquear archivos específicos si no aportan valor SEO
+Disallow: /404.html
+Disallow: /README
+
+# Evitar indexar archivos por extensión innecesaria
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.png$
+
+# Permitir favicon y archivos necesarios para marca
+Allow: /assets/imgs/favicon/
+
+# Sitemap para mejorar indexación
+Sitemap: https://macpavingandsealcoating.com/sitemap.xml
