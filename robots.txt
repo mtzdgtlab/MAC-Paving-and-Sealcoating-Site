@@ -23,7 +23,7 @@ Disallow: /README
 # Evitar indexar archivos por extensión innecesaria
 Disallow: /*.js$
 Disallow: /*.css$
-Disallow: /*.png$
+Disallow: /*.webp$
 
 # Permitir favicon y archivos necesarios para marca
 Allow: /assets/imgs/favicon/
