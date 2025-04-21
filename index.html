@@ -32,7 +32,7 @@
       "@type": "LocalBusiness",
       "name": "MAC Paving and Sealcoating LLC",
       "url": "https://macpavingandsealcoating.com",
-      "logo": "https://macpavingandsealcoating.com/mac-paving-logo.webp",
+      "logo": "https://macpavingandsealcoating.com/mac-paving-logo.png",
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-201-755-7836",
@@ -120,17 +120,28 @@
   <meta name="theme-color" content="#1A3164">
 
   <!-- CSS aquí -->
+  <!-- CSS base y frameworks -->
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="/assets/css/meanmenu.min.css">
+
+  <!-- Librerías externas -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
   <link rel="stylesheet" href="/assets/css/slick.css">
+
+  <!-- Popup -->
   <link rel="preload" href="/assets/css/magnific-popup.css" as="style" onload="this.rel='stylesheet'">
   <noscript>
     <link rel="stylesheet" href="/assets/css/magnific-popup.css">
   </noscript>
+
+  <!-- ICONOS personalizados -->
   <link rel="stylesheet" href="/assets/css/fontawesome-pro.css">
+
+  <!-- Íconos personalizados (si usas Icomoon además de Font Awesome) -->
   <link rel="stylesheet" href="/assets/css/icomoon.css">
+
+  <!-- Estilos de espaciado y principales -->
   <link rel="stylesheet" href="/assets/css/spacing.css">
   <link rel="stylesheet" href="/assets/css/main.css">
   <link rel="preload" as="image" href="/assets/imgs/banner/banner-1.webp" type="image/webp">
@@ -397,7 +408,8 @@
             </div>
             <!-- block -->
             <div class="swiper-slide">
-              <div class="banner-main" style="background-image: url('/assets/imgs/banner/banner-2.webp');">
+              <div class="banner-main" style="background-image: url('/assets/imgs/banner/banner-2.webp');"
+                loading="lazy">
                 <div class="large-container">
                   <div class="banner-area p-relative z-3 wow img-custom-anim-left animated" data-wow-delay="2000ms">
                     <span class="p-relative banner-sub-title">PREMIUM QUALITY</span>
@@ -421,7 +433,8 @@
             </div>
             <!-- block -->
             <div class="swiper-slide">
-              <div class="banner-main" style="background-image: url('/assets/imgs/banner/banner-3.webp');">
+              <div class="banner-main" style="background-image: url('/assets/imgs/banner/banner-3.webp');"
+                loading="lazy">
                 <div class="large-container">
                   <div class="banner-area p-relative z-3 wow img-custom-anim-left animated" data-wow-delay="3000ms">
                     <span class="p-relative banner-sub-title">EXCEPTIONAL QUALITY</span>
@@ -1194,7 +1207,7 @@
   <script src="/assets/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/js/meanmenu.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="/assets/js/swiper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="/assets/js/slick.min.js"></script>
   <script src="/assets/js/magnific-popup.min.js"></script>
   <script src="/assets/js/counterup.js"></script>

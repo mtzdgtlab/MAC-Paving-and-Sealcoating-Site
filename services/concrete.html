@@ -2,33 +2,12 @@
 <html lang="en">
 
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-5G9N2B6G');</script>
-  <!-- End Google Tag Manager -->
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Concrete Services in New Jersey | MAC Paving and Sealcoating</title>
   <meta name="description"
     content="MAC Paving and Sealcoating provides professional concrete services in New Jersey, including walkways, sidewalks, curbs, and aprons. Enhance your property with our high-quality concrete solutions." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T8PDJGNJ6B"></script>
-  <script>
-    window.dataLayer = window.dataLayer || []
-    function gtag() {
-      dataLayer.push(arguments)
-    }
-    gtag("js", new Date())
-
-    gtag("config", "G-T8PDJGNJ6B")
-  </script>
   <meta name="keywords"
     content="concrete services NJ, walkway construction NJ, sidewalk construction NJ, concrete curbs NJ, aprons NJ, residential concrete NJ, commercial concrete NJ, concrete driveway NJ, concrete installation NJ, concrete repair NJ, concrete contractors NJ, concrete paving NJ, MAC Paving and Sealcoating NJ, sidewalks NJ, curbs nj, aprons nj" />
 
@@ -39,7 +18,7 @@
         "@type": "LocalBusiness",
         "name": "MAC Paving and Sealcoating LLC",
         "url": "https://macpavingandsealcoating.com/services/concrete.html",
-        "logo": "https://macpavingandsealcoating.com/mac-paving-logo.webp",
+        "logo": "https://macpavingandsealcoating.com/mac-paving-logo.png",
         "contactPoint": {
           "@type": "ContactPoint",
           "telephone": "+1-201-755-7836",
@@ -207,7 +186,7 @@
   <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/assets/css/meanmenu.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  <link rel="stylesheet" href="/assets/css/swiper.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="/assets/css/slick.css" />
   <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
   <link rel="stylesheet" href="/assets/css/fontawesome-pro.css" />
@@ -1065,42 +1044,103 @@
   <script src="/assets/js/bootstrap.bundle.min.js"></script>
   <script src="/assets/js/meanmenu.min.js"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script src="/assets/js/swiper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="/assets/js/slick.min.js"></script>
   <script src="/assets/js/magnific-popup.min.js"></script>
   <script src="/assets/js/counterup.js"></script>
   <script src="/assets/js/wow.js"></script>
   <script src="/assets/js/main.js"></script>
+  <!-- Inicializaciones -->
   <script>
-    // Initialize AOS
-    AOS.init({
-      duration: 800,
-      easing: "ease-in-out",
-      once: true,
-      offset: 100,
-    })
-    // Optimized preloader with vanilla JS
-    const preloader = document.getElementById("preloader")
-    if (preloader) {
-      const hidePreloader = () => {
-        preloader.style.opacity = "0"
-        preloader.style.transition = "opacity 0.5s ease-out"
-        setTimeout(() => {
-          preloader.style.display = "none"
-        }, 500)
+    document.addEventListener("DOMContentLoaded", () => {
+      // Contact Form
+      const contactForm = document.getElementById("contactForm");
+      const formMessage = document.getElementById("formMessage");
+
+      if (contactForm) {
+        contactForm.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          try {
+            const response = await fetch(contactForm.action, {
+              method: "POST",
+              body: new FormData(contactForm),
+              headers: {
+                Accept: "application/json",
+              },
+            });
+
+            if (response.ok) {
+              formMessage.textContent =
+                "Thank you for your message! We'll get back to you soon.";
+              formMessage.style.color = "#FFFFFF";
+              formMessage.style.fontWeight = "bold";
+              formMessage.style.fontSize = "1.2em";
+              contactForm.reset();
+            } else {
+              throw new Error("Form submission failed");
+            }
+          } catch (error) {
+            formMessage.textContent =
+              "Sorry, there was an error submitting your message. Please try again.";
+            formMessage.style.color = "yellow";
+          }
+          formMessage.style.display = "block";
+        });
       }
-      // Try to hide on DOMContentLoaded
-      document.addEventListener("DOMContentLoaded", hidePreloader)
-      // Fallback to load event
-      window.addEventListener("load", () => {
-        if (preloader.style.display !== "none") {
-          hidePreloader()
-        }
-      })
-    }
-    // Update copyright year
-    document.getElementById("current-year").textContent =
-      new Date().getFullYear()
+
+      // AOS Animation Init
+      AOS.init({
+        duration: 800,
+        easing: "ease-in-out",
+        once: true,
+        offset: 100,
+      });
+
+      // Año automático en el footer
+      const yearEl = document.getElementById("current-year");
+      if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+      }
+    });
+  </script>
+
+  <!-- ✅ Google Tag Manager & Analytics OPTIMIZADO -->
+  <script>
+    window.addEventListener('load', () => {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadTrackingScripts);
+      } else {
+        setTimeout(loadTrackingScripts, 2000);
+      }
+
+      function loadTrackingScripts() {
+        // GTM
+        (function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+          j.async = true;
+          j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-5G9N2B6G');
+
+        // gtag
+        const gaScript = document.createElement('script');
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-T8PDJGNJ6B';
+        gaScript.async = true;
+        document.head.appendChild(gaScript);
+
+        gaScript.onload = function () {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() { dataLayer.push(arguments); }
+          gtag('js', new Date());
+          gtag('config', 'G-T8PDJGNJ6B');
+        };
+      }
+    });
+
   </script>
 </body>
 
