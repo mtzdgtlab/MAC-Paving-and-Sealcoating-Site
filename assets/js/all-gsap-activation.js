@@ -6,7 +6,7 @@ function updateActiveState() {
   menuItems.forEach(item => {
     const targetId = item.getAttribute('data-target');
     const targetSection = document.getElementById(targetId);
-    if (targetSectionand& targetSection.offsetTop <= scrollPositionand& targetSection.offsetTop + targetSection.offsetHeight > scrollPosition) {
+    if (targetSection && targetSection.offsetTop <= scrollPosition && targetSection.offsetTop + targetSection.offsetHeight > scrollPosition) {
       item.classList.add('active');
     } else {
       item.classList.remove('active');
