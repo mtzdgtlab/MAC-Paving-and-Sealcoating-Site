@@ -64,7 +64,7 @@
       "name": "Our Services",
       "short_name": "Services",
       "description": "View our complete range of services",
-      "url": "/services.html",
+      "url": "/services/services.html",
       "icons": [
         {
           "src": "/assets/imgs/favicon/services-icon.webp",

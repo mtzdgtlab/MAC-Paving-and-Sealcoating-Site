@@ -3,7 +3,7 @@ User-agent: *
 # Permitir indexación de páginas clave
 Allow: /index.html
 Allow: /contact.html
-Allow: /services.html
+Allow: /services/services.html
 
 # Categorías principales
 Allow: /services/asphalt-paving.html
