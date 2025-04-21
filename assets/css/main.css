@@ -3044,6 +3044,333 @@ p.banner-text {
 }
 
 /*----------------------------------------*/
+/*  BANNER IMG CSS START
+/*----------------------------------------*/
+
+.banners-main {
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+}
+
+.banners-main .banner-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.banners-main::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(16, 32, 57, 0.9) 10%,
+    rgba(11, 21, 38, 0.6) 56.25%,
+    rgba(0, 0, 0, 0) 97.81%
+  );
+}
+
+.banners-area {
+  max-width: 775px;
+  padding-left: 80px;
+}
+
+.banners-sub-title {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-left: 56px;
+}
+
+.banners-sub-title:before {
+  content: '\e92c';
+  font-family: 'icomoon';
+  color: #00e1ff;
+  border: 1px solid #00e1ff;
+  position: absolute;
+  top: 0px;
+  left: -56px;
+  height: 20px;
+  width: 40px;
+  padding: 2px 1px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.banners-sub-title.no-border:before {
+  border: none;
+}
+
+h1.banners-title {
+  color: #fff;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 77px;
+  padding: 20px 0;
+}
+
+p.banners-text {
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  padding-bottom: 40px;
+  padding-right: 29px;
+}
+
+.banners-btn-area {
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+}
+
+.banners-btn-area .icon-1 {
+  position: relative;
+  height: 56px;
+  width: 56px;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banners-btn-area .play-btn {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: #fff;
+  gap: 22px;
+}
+
+.banners-btn-area .icon-1:before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--theme-color);
+  border: 1px solid var(--theme-color);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all 500ms ease;
+}
+
+.banners-btn-area .icon-1:hover:before {
+  transform: scale(1, 1);
+}
+
+.banners-btn-area .icon-1 i {
+  position: relative;
+  z-index: 1;
+}
+
+.banners-dot {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.banners-dot-inner {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.banners-dot-inner span.swiper-pagination-bullet {
+  background: #fff;
+  position: relative;
+}
+
+.banners-dot-inner
+  span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: var(--theme-color);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banners-dot-inner
+  span.swiper-pagination-bullet.swiper-pagination-bullet-active:before {
+  content: '';
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.banners-btn-area,
+.banners-sub-title {
+  position: relative;
+  opacity: 0;
+  -webkit-transform: translateX(100px);
+  -moz-transform: translateX(100px);
+  -ms-transform: translateX(100px);
+  -o-transform: translateX(100px);
+  transform: translateX(100px);
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+
+.swiper-slide-active .banners-btn-area,
+.swiper-slide-active .banners-sub-title {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition-delay: 1000ms;
+  -moz-transition-delay: 1000ms;
+  -ms-transition-delay: 1000ms;
+  -o-transition-delay: 1000ms;
+  transition-delay: 1000ms;
+}
+.banners-title,
+.banners-text {
+  opacity: 0;
+  -webkit-transform: translateX(-100px);
+  -moz-transform: translate(-100px);
+  -ms-transform: translateX(-100px);
+  -o-transform: translateX(-100px);
+  transform: translateX(-100px);
+  -webkit-transition: all 1000ms ease;
+  -moz-transition: all 1000ms ease;
+  -ms-transition: all 1000ms ease;
+  -o-transition: all 1000ms ease;
+  transition: all 1000ms ease;
+}
+.swiper-slide-active .banners-title,
+.swiper-slide-active .banners-text {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+  -webkit-transition-delay: 1000ms;
+  -moz-transition-delay: 1000ms;
+  -ms-transition-delay: 1000ms;
+  -o-transition-delay: 1000ms;
+  transition-delay: 1000ms;
+}
+
+@media only screen and (max-width: 1650px) {
+  .banners-dot-inner {
+    left: 20px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .banners-dot-inner {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .banners-main {
+    padding: 100px 20px;
+    min-height: auto;
+  }
+
+  .banners-area {
+    padding-left: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .banners-sub-title {
+    font-size: 14px;
+    line-height: 24px;
+    margin-left: 0;
+    letter-spacing: 2px;
+  }
+
+  .banners-sub-title:before {
+    display: none;
+  }
+
+  h1.banners-title {
+    font-size: 32px;
+    line-height: 45px;
+    padding: 10px 0;
+  }
+
+  p.banners-text {
+    font-size: 14px;
+    line-height: 22px;
+    padding: 0 10px 20px;
+    display: block;
+  }
+
+  .banners-btn-area {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 25px;
+  }
+
+  .banners-btn-area .play-btn {
+    display: none;
+  }
+
+  .primary-btn-1 {
+    font-size: 14px;
+    padding: 12px 24px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .banners-title {
+    font-size: 32px;
+    line-height: 52px;
+    margin-top: 25px;
+  }
+
+  .banners-btn-area {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 20px; /* Espaciado entre botones */
+    margin-top: 50px; /* Separación con el título */
+  }
+
+  .banners-btn-area .play-btn {
+    display: none;
+  }
+
+  p.banners-text {
+    display: none;
+  }
+}
+
+
+/*----------------------------------------*/
 /*  BANNER TWO CSS START
 /*----------------------------------------*/
 .banner-video {
