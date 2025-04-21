@@ -30,7 +30,6 @@
 26	TESTIMONIALS CSS START
 27	BLOG STYLE ONE CSS START
 28	BRAND CSS START
-29	BANNER TWO CSS START
 30	FEATURES CSS START
 31	ABOUT US 2 CSS START
 32	SERVICE TAB CSS START
@@ -42,7 +41,6 @@
 38	HELP FORM CSS START
 39	BLOG STYLE TWO CSS START
 40	FOOTER STYLE TWO CSS START
-41	BANNER STYLE THREE CSS START
 42	ABOUT THREE CSS START
 43	HELP FORM THREE CSS START
 44	SERVICE THREE CSS START
@@ -2262,7 +2260,7 @@ figure {
   height: 47px;
   width: 47px;
   border-radius: 50%;
-  background: red;
+  background: rgb(26, 49, 100);
   color: #fff;
   display: flex;
   justify-content: center;
@@ -2278,7 +2276,7 @@ figure {
   left: -5px;
   height: 57px;
   width: 57px;
-  border: 1px solid red;
+  border: 1px solid rgb(26, 49, 100);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -2747,9 +2745,9 @@ ul.footer-contact-info-widget .icon {
 /*----------------------------------------*/
 
 .banner-main {
-  padding: 125px 0px;
+  position: relative;
+  padding: 175px 0px;
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
 }
 
@@ -3080,24 +3078,35 @@ p.banner-text {
     top: 35px;
   }
 }
-
 @media only screen and (max-width: 425px) {
   .banner-main {
     padding: 80px 0px;
   }
-  .banner-btn-area {
-    display: inline-flex;
-    gap: 20px;
-    flex-direction: column;
+
+  .banner-area span.banner-sub-title {
+    display: block;
+    margin-bottom: 20px;
   }
 
-  h1.banner-title {
+  .banner-title {
     font-size: 32px;
     line-height: 52px;
+    margin-bottom: 25px;
   }
-  .banner-area {
-    max-width: 250px;
-    padding-left: 10px;
+
+  .banner-btn-area {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 24px; /* Espaciado entre botones */
+    margin-top: 30px; /* Separación con el título */
+  }
+
+  .banner-btn-area .play-btn {
+    display: none;
+  }
+
+  p.banner-text {
+    display: none;
   }
 }
 
@@ -3508,6 +3517,11 @@ p.banner-text {
   border: 1px solid #fff;
 }
 
+.service-slider-section {
+  position: relative;
+  overflow: hidden;
+}
+
 .service-slider-section .shape-10 {
   position: absolute;
   top: 0;
@@ -3530,7 +3544,6 @@ p.banner-text {
 
 .service-slider-section .shape-11 {
   position: absolute;
-  bottom: -80px;
   left: 0;
   width: 100%;
   height: 100%;
@@ -3719,6 +3732,8 @@ p.banner-text {
   }
 
   .cta-1-section .row {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
   }
 
@@ -4434,170 +4449,6 @@ p.banner-text {
 .brand-section img:hover {
   filter: grayscale(0);
   opacity: 1;
-}
-
-/*----------------------------------------*/
-/*  BANNER TWO CSS START
-/*----------------------------------------*/
-
-.banner-main-2 {
-  padding-top: 312px;
-  padding-bottom: 225px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.banner-main-2:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(16, 32, 57, 0.7);
-}
-
-.banner-area-2 {
-  max-width: 775px;
-  padding-left: 70px;
-}
-
-.banner-btn-area-2 {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 30px;
-}
-
-.banner-btn-area-2 h6 {
-  font-weight: 400;
-  color: #fff;
-  text-transform: capitalize;
-}
-
-.banner-main-2 .socials-area {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-
-.banner-main-2 .socials-area li {
-  width: 36px;
-  height: 36px;
-  border: 1px solid #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
-  color: #fff;
-  transition: all 500ms ease;
-}
-
-.banner-main-2 .socials-area li:hover {
-  background: var(--theme-color);
-  border: 1px solid var(--theme-color);
-}
-
-.banner-main-2 .socials-area span {
-  color: #fff;
-  transform: rotate(-90deg);
-  display: block;
-  margin-top: 24px;
-  position: relative;
-  top: 24px;
-  right: 20px;
-}
-
-.banner-section-2 .shape-1 {
-  position: absolute;
-  top: 117px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  animation: slide-right-sm 5s ease 1;
-}
-
-.banner-section-2 .shape-2 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  z-index: 1;
-  animation: slide-right-sm 5s ease 1;
-}
-
-.banner-section-2 .shape-3 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: bottom left;
-  animation: slide-right-sm 5s ease 1;
-}
-
-.banner-section-2 .shape-4 {
-  position: absolute;
-  top: 4px;
-  right: 175px;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  animation: slide-left-sm 5s ease 1;
-}
-
-.banner-section-2 .shape-5 {
-  position: absolute;
-  top: 4px;
-  right: 360px;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  animation: slide-left-sm 5s ease 1;
-}
-
-.banner-section-2 .shape-6 {
-  position: absolute;
-  top: 4px;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  animation: slide-left-sm 5s ease 1;
-}
-
-@media only screen and (max-width: 991px) {
-  .banner-main-2 {
-    padding-top: 200px;
-    padding-bottom: 150px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .banner-btn-area-2 {
-    flex-direction: column;
-  }
-
-  .banner-area-2 {
-    padding-left: 0;
-  }
-  .banner-main-2 .socials-area,
-  .banner-section-2 .shape-1,
-  .banner-section-2 .shape-4,
-  .banner-section-2 .shape-6 {
-    display: none;
-  }
 }
 
 /*----------------------------------------*/
@@ -6079,7 +5930,7 @@ ul.service-details-page-list li {
 }
 
 .service-widget-1 {
-  background: #f8f8f8;
+  background: #e4e4e4;
   padding: 40px 30px;
 }
 
@@ -6653,7 +6504,7 @@ ul.postbox__comment_ratings {
 
 .contact-p-info-area .contact-box {
   padding: 50px 40px 40px 40px;
-  background: #f8f8f8;
+  background: #e3e3e3;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -6675,7 +6526,7 @@ ul.postbox__comment_ratings {
 
 .contact-page-form-area {
   padding: 60px;
-  background: #f8f8f8;
+  background: #e3e3e3;
 }
 
 .contact-page-form label {

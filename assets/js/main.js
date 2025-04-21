@@ -837,9 +837,7 @@
       slidesPerView: 1,
       slidesPerColumn: 1,
       paginationClickable: true,
-      fadeEffect: {
-        crossFade: true,
-      },
+
       loop: true,
       effect: 'fade',
       autoplay: {
@@ -898,9 +896,7 @@
       slidesPerView: 1,
       slidesPerColumn: 1,
       paginationClickable: true,
-      fadeEffect: {
-        crossFade: true,
-      },
+
       loop: true,
       effect: 'fade',
       autoplay: {
