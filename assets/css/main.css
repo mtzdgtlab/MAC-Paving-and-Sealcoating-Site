@@ -2999,10 +2999,7 @@ p.banner-text {
   }
 
   p.banner-text {
-    font-size: 14px;
-    line-height: 22px;
-    padding: 0 10px 20px;
-    display: block;
+    display: none;
   }
 
   .banner-btn-area {
