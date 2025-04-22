@@ -2733,7 +2733,6 @@ ul.footer-contact-info-widget .icon {
 }
 
 .banner-main {
-  position: relative;
   min-height: 650px;
   padding: 175px 50px;
   background-repeat: no-repeat;
@@ -2758,7 +2757,7 @@ ul.footer-contact-info-widget .icon {
 
 .banner-area {
   max-width: 775px;
-  padding-left: 80px;
+  padding-left: 50px;
 }
 
 .banner-sub-title {
@@ -2798,7 +2797,7 @@ h1.banner-title {
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
-  line-height: 77px;
+  line-height: 70px;
   padding: 20px 0;
 }
 
