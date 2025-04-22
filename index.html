@@ -8,6 +8,10 @@
   <title>
     MAC Paving | Asphalt, Concrete and Sealcoating Services NJ
   </title>
+  <!-- Preconexión para recursos externos (mejora rendimiento) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <meta name="description"
     content="MAC Paving and Sealcoating provides expert asphalt paving, sealcoating, concrete, and paver services across New Jersey. Residential and commercial solutions with guaranteed quality.">
   <link rel="canonical" href="https://macpavingandsealcoating.com/">
@@ -294,8 +298,8 @@
             <div class="header-right d-flex justify-content-end">
               <div class="mean__menu-wrapper d-none d-lg-block">
                 <div class="main-menu">
-                  <nav id="mobile-menu" aria-label="Main Navigation">
-                    <ul role="menubar">
+                  <nav aria-label="Mobile Navigation">
+                    <ul role="menubar" id="mobile-menu">
                       <li role="none"><a role="menuitem" href="/index.html" aria-current="page">Home</a></li>
                       <li class="has-dropdown" role="none">
                         <a role="menuitem" href="/services/asphalt-paving.html">Asphalt Paving</a>
@@ -322,7 +326,6 @@
                           <li><a role="menuitem" href="/services/pavers/belgium-blocks.html">Belgium Blocks</a></li>
                         </ul>
                       </li>
-
                       <li class="has-dropdown" role="none">
                         <a role="menuitem" href="/services/concrete.html">Concrete</a>
                         <ul class="submenu" role="menu">
@@ -930,11 +933,11 @@
                         </a>
                       </h4>
                       <ul class="ratings">
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
-                        <li><i class="fa fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
+                        <li><i class="fas fa-star"></i></li>
                       </ul>
                       <p>
                         "Mac Paving Company did a great job. I highly
@@ -1163,12 +1166,19 @@
                   complete is built to last and designed to satisfy our
                   customers.
                 </p>
-                <div class="footer-socials mb-60">
-                  <span><a href="https://www.facebook.com/profile.php?id=61563583505866" target="_blank"><i
-                        class="fab fa-facebook-f"></i></a></span>
-                  <span><a href="https://www.instagram.com/macpavingandsealcoating/" target="_blank"><i
-                        class="fab fa-instagram"></i></a></span>
-                </div>
+                <ul class="footer-socials mb-60">
+                  <li>
+                    <a href="https://www.facebook.com/profile.php?id=61563583505866" target="_blank"
+                      aria-label="Facebook">
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.instagram.com/macpavingandsealcoating/" target="_blank" aria-label="Instagram">
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">

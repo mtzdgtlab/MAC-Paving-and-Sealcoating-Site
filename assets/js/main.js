@@ -260,6 +260,24 @@
   new WOW().init()
 
   /*======================================
+  AOS Init
+========================================*/
+  AOS.init({
+    duration: 800,
+    easing: 'ease-in-out',
+    once: true,
+    offset: 100,
+  })
+
+  /*======================================
+  Año automático en el footer
+========================================*/
+  const yearElement = document.getElementById('current-year')
+  if (yearElement) {
+    yearElement.textContent = new Date().getFullYear()
+  }
+
+  /*======================================
 	Back To Top Js
 	========================================*/
   var progressPath = document.querySelector('.backtotop-wrap path')

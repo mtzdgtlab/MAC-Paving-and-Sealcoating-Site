@@ -1084,9 +1084,10 @@ figure {
 /*----------------------------------------*/
 
 .section-space {
-  padding-top: 120px;
+  padding-top: 20px;
   padding-bottom: 120px;
 }
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .section-space {
     padding-top: 100px;
@@ -2546,7 +2547,7 @@ figure {
   color: #fff;
 }
 
-.footer-widget-1 .footer-socials span {
+.footer-widget-1 .footer-socials li {
   color: #fff;
   height: 36px;
   width: 36px;
@@ -2565,7 +2566,7 @@ figure {
   gap: 10px;
 }
 
-.footer-widget-1 .footer-socials span:hover {
+.footer-widget-1 .footer-socials li:hover {
   background: var(--theme-color);
   color: #fff;
   border: 1px solid var(--theme-color);
@@ -2640,22 +2641,6 @@ figure {
 
 .footer-widget-4 p {
   color: #fff;
-}
-
-.footer-subscribe input[type='email'] {
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  height: inherit;
-  border-radius: 0;
-  margin-bottom: 10px;
-  height: 60px;
-}
-
-.footer-subscribe button {
-  width: 100%;
-  justify-content: center;
 }
 
 .footer-bottom span {
