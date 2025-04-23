@@ -15,3 +15,7 @@ assets/imgs/service/.DS_Store
 .gitignore
 assets/js/.DS_Store
 services/.DS_Store
+.DS_Store
+assets/.DS_Store
+assets/imgs/.DS_Store
+services/.DS_Store

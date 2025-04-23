@@ -2721,14 +2721,13 @@ ul.footer-contact-info-widget .icon {
 /*  BANNER CSS START
 /*----------------------------------------*/
 .banner-video {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  object-fit: contain;
+  position: relative;
   z-index: -1;
+  display: block;
 }
 
 .desktop-only {
