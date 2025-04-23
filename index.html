@@ -379,10 +379,19 @@
     <!-- Banner area start -->
     <section aria-label="Banner section" class="banner-section p-relative fix">
       <div class="banner-main">
-        <video class="banner-video" autoplay muted playsinline preload="auto" width="1920" height="1080"
-          onended="this.currentTime = 0; this.play();">
-          <source src="/assets/imgs/vids/mac-paving-video-reel.webm" type="video/webm" />
-          <source src="/assets/imgs/vids/mac-paving-video-reel.mp4" type="video/mp4" />
+        <!-- VIDEO PARA ESCRITORIO -->
+        <video class="banner-video desktop-only" autoplay muted loop playsinline preload="auto" width="1920"
+          height="1080" onended="this.currentTime = 0; this.play();">
+          <source src="/assets/imgs/vids/banner-macpaving-site.webm" type="video/webm">
+          <source src="/assets/imgs/vids/banner-macpaving-site.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+
+        <!-- VIDEO PARA MÓVIL -->
+        <video class="banner-video mobile-only" autoplay muted loop playsinline preload="auto" width="1080"
+          height="1080" onended="this.currentTime = 0; this.play();">
+          <source src="/assets/imgs/vids/banner-macpaving-site-4do.webm" type="video/webm">
+          <source src="/assets/imgs/vids/banner-macpaving-site-4do.mp4" type="video/mp4">
           Your browser does not support the video tag.
         </video>
         <div class="swiper banner-active ">

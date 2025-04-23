@@ -2729,9 +2729,24 @@ ul.footer-contact-info-widget .icon {
   aspect-ratio: 16 / 9;
   object-fit: cover;
   z-index: -1;
+}
+
+.desktop-only {
   display: block;
 }
 
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+  .mobile-only {
+    display: block;
+  }
+}
 .banner-main {
   min-height: 650px;
   padding: 175px 50px;
