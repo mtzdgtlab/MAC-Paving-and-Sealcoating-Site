@@ -134,7 +134,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+  <!-- Preload Swiper CSS -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Defer Swiper CSS without blocking render -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css" media="print"
+    onload="this.media='all'"
     integrity="sha512-rd0qOHVMOcez6pLWPVFIv7EfSdGKLt+eafXh4RO/12Fgr41hDQxfGvoi1Vy55QIVcQEujUE1LQrATCLl2Fs+ag=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="/assets/css/slick.css">
@@ -210,7 +217,7 @@
               </button>
             </div>
           </div>
-          <div class="offcanvas__search mb-25">
+          <div class="offcanvas__search mb-25" hidden>
             <p class="text-white">
               <strong>Transform Your Surfaces!</strong><br>
               <br>
@@ -393,8 +400,8 @@
         <!-- VIDEO PARA MÓVIL -->
         <video class="banner-video mobile-only" autoplay muted loop playsinline preload="auto" width="1080"
           height="1080" onended="this.currentTime = 0; this.play();">
-          <source src="/assets/imgs/vids/1080-banner.webm" type="video/webm">
           <source src="/assets/imgs/vids/1080-banner.mp4" type="video/mp4">
+          <source src="/assets/imgs/vids/1080-banner.webm" type="video/webm">
           Your browser does not support the video tag.
         </video>
         <div class="swiper banner-active ">
