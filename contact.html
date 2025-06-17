@@ -754,7 +754,7 @@
                     </button>
                   </div>
                 </div>
-                <div id="formMessage" class="mt-3" style="display: none"></div>
+                <div id="successMessage" class="mt-3" style="display: none;"></div>
               </form>
             </div>
           </div>
@@ -840,142 +840,175 @@
     </section>
     <!-- Choose area end -->
 
-    <!-- Google Calendar Appointment Scheduling begin -->
-    <iframe 
-  src="https://www.google.com/maps/d/embed?mid=1doFqYthqTPZPOXVSTF2Pjcq3J3apz-A&ehbc=2E312F" 
-      style="border: 0" width="100%" height="600" title="Service area map of MAC Paving and Sealcoating in New Jersey"  frameborder="0" loading="lazy"
-      allowfullscreen></iframe>
-    <!-- end Google Calendar Appointment Scheduling -->
+
+
+
+    <section
+    aria-label="Service Areas Full Map"
+    class="project-section section-space fix">
+   <div class="small-container">
+    <div class="small-container" style="max-width: 900px; margin: 0 auto; text-align: center;">
+      <span class="section-sub-title">Driveway Paving Experts</span>
+      <h2 class="section-title mt-35 mb-35">Service Areas</h2>
+      <p style="margin-bottom: 30px;">
+        We proudly serve homeowners in
+        <strong>Passaic, Bergen, Essex, Morris, Middlesex, Union, Somerset, Hudson, and Sussex</strong>
+        counties across Northern New Jersey.
+      </p>
+    </div>
+  
+    <!-- Full-width map iframe -->
+    <div style="width: 100%; height: 620px; overflow: hidden;">
+      <iframe
+        src="/service-area-map.html"
+        width="100%"
+        height="100%"
+        style="border: 0; display: block;"
+        frameborder="0"
+        loading="lazy"
+        title="MAC Paving Service Area Map"
+        aria-label="Interactive map showing MAC Paving and Sealcoating service areas in New Jersey"
+        allowfullscreen>
+      </iframe>
+    </div>
+    </div>
+  </section>
+
+
+
   </main>
 
- <!-- Footer area start -->
- <footer>
-  <div class="footer-main bg-color-1">
-    <div class="footer-top section-space-medium">
-      <div class="small-container">
-        <div class="row g-4">
-          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6">
-            <div class="footer-widget-1">
-              <a
-                href="tel:+12017557836"
-                aria-label="Call MAC Paving and Sealcoating">
-                <figure class="image">
-                  <img
-                    src="/assets/imgs/logo/logo.png"
-                alt="MAC Paving and Sealcoating"
-                loading="lazy"
-                width="571"
-                height="217" />
-                </figure>
-              </a>
-              <p class="mt-40 mb-40">
-                At MAC Paving and Sealcoating, we specialize in asphalt
-                paving, driveway installations, and more. Every project we
-                complete is built to last and designed to satisfy our
-                customers.
-              </p>
-              <ul class="footer-socials mb-60">
-                <li>
-                  <a
-                    href="https://www.facebook.com/profile.php?id=61563583505866"
-                    target="_blank"
-                    aria-label="Facebook">
-                    <i class="fa-brands fa-facebook-f"></i>
+    
+    <!-- Footer area start -->
+    <footer>
+      <div class="footer-main bg-color-1">
+        <div class="footer-top section-space-medium">
+          <div class="small-container">
+            <div class="row g-4">
+    
+              <!-- Column 1: Logo + About -->
+              <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6 col-6">
+                <div class="footer-widget-1">
+                  <a href="tel:+12017557836" aria-label="Call MAC Paving and Sealcoating">
+                    <figure class="image">
+                      <img
+                        src="/assets/imgs/logo/logo.png"
+                        alt="MAC Paving and Sealcoating"
+                        loading="lazy"
+                        width="571"
+                        height="217" />
+                    </figure>
+                    <span class="visually-hidden">Call MAC Paving and Sealcoating</span>
                   </a>
-                </li>
-                <li>
-                  <a
-                    href="https://www.instagram.com/macpavingandsealcoating/"
-                    target="_blank"
-                    aria-label="Instagram">
-                    <i class="fa-brands fa-instagram"></i>
-                  </a>
-                </li>
-              </ul>
+                  <p class="mt-40 mb-40">
+                    At MAC Paving and Sealcoating, we specialize in asphalt paving, driveway installations, and more.
+                    Every project we complete is built to last and designed to satisfy our customers.
+                  </p>
+                  <ul class="footer-socials mb-60">
+                    <li>
+                      <a href="https://www.facebook.com/profile.php?id=61563583505866" target="_blank" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span class="visually-hidden">Facebook</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.instagram.com/macpavingandsealcoating/" target="_blank" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span class="visually-hidden">Instagram</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+    
+              <!-- Column 2: Quick Links -->
+              <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6 col-6">
+                <div class="footer-widget-2 pl-100 pl-sm-0">
+                  <h4 class="mb-30 footer-title">Quick Links</h4>
+                  <ul class="service-list">
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                    <li><a href="/services/asphalt-paving.html">Asphalt Paving</a></li>
+                    <li><a href="/services/sealer.html">Sealer</a></li>
+                    <li><a href="/services/pavers.html">Pavers</a></li>
+                    <li><a href="/services/concrete.html">Concrete</a></li>
+                    <li><a href="/services/landscaping.html">Landscaping</a></li>
+                  </ul>
+                </div>
+              </div>
+    
+              <!-- Column 3: Services -->
+              <div class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6 col-6">
+                <div class="footer-widget-2 pl-100 pl-sm-0">
+                  <h4 class="mb-30 footer-title">Our Services</h4>
+                  <ul class="service-list">
+                    <li><a href="/services/asphalt-paving/installation.html">Installation</a></li>
+                    <li><a href="/services/asphalt-paving/extension.html">Extension</a></li>
+                    <li><a href="/services/sealer/sealcoating.html">Sealcoating</a></li>
+                    <li><a href="/services/sealer/crack-filling.html">Crack Filling</a></li>
+                    <li><a href="/services/concrete/sidewalks.html">Sidewalks</a></li>
+                    <li><a href="/services/pavers/belgium-blocks.html">Belgium Blocks</a></li>
+                    <li><a href="/services/concrete/walkways.html">Walkways</a></li>
+                  </ul>
+                </div>
+              </div>
+    
+              <!-- Column 4: Service Area Map -->
+              <section class="col-xxl-3 col-xl-3 col-lg-6 col-md-6 col-sm-6 col-6" itemprop="areaServed" itemscope itemtype="https://schema.org/Place">
+                <div class="footer-widget-2">
+                  <h4 class="mb-30 footer-title" itemprop="name">Service Area Map</h4>
+                  
+                  <!-- Texto para SEO y accesibilidad -->
+                  <p class="visually-hidden" itemprop="description">
+                    MAC Paving and Sealcoating proudly serves homeowners in Passaic, Bergen, Essex, Morris, Middlesex, Union, Somerset, Hudson, and Sussex counties, New Jersey.
+                  </p>
+              
+                  <!-- Mapa integrado con metadata y etiquetas SEO -->
+                  <div class="footer-map" style="width: 100%; height: 280px; border: 1px solid #ccc; border-radius: 8px; overflow: hidden;">
+                    <iframe
+                      src="/service-area-map.html"
+                      width="100%"
+                      height="100%"
+                      style="border:0;"
+                      loading="lazy"
+                      title="Service Area Map for Northern New Jersey Counties"
+                      aria-label="Interactive map showing service coverage in Passaic, Bergen, Essex, Morris, Middlesex, Union, Somerset, Hudson, and Sussex counties, New Jersey.">
+                    </iframe>
+                  </div>
+              
+                  <!-- Microdatos adicionales -->
+                  <meta itemprop="addressRegion" content="New Jersey" />
+                  <meta itemprop="name" content="Passaic, Bergen, Essex, Morris, Middlesex, Union, Somerset, Hudson, Sussex" />
+                </div>
+              </section>
+    
+            </div> <!-- /.row -->
+          </div>   <!-- /.small-container -->
+        </div>     <!-- /.footer-top -->
+    
+        <div class="small-container">
+          <div class="footer-bottom pt-30 pb-30">
+            <div class="left-area">
+              <span>
+                Copyright &copy; <span id="current-year"></span>, All rights
+                reserved. Designed by
+                <a href="https://www.mdgtlab.com" target="_blank"
+                  >Isra Martinez</a
+                >
+              </span>
             </div>
-          </div>
-          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
-            <div class="footer-widget-2 pl-120 pr-sm-0">
-              <h4 class="mb-30 footer-title">Quick Links</h4>
-              <ul class="service-list">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/contact.html">Contact</a></li>
-                <li>
-                  <a href="/services/asphalt-paving.html">Asphalt Paving</a>
-                </li>
-                <li><a href="/services/sealer.html">Sealer</a></li>
-                <li><a href="/services/pavers.html">Pavers</a></li>
-                <li><a href="/services/concrete.html">Concrete</a></li>
-                <li>
-                  <a href="/services/landscaping.html">Landscaping</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
-            <div class="footer-widget-2 pl-100 pl-sm-0">
-              <h4 class="mb-30 footer-title">Our Services</h4>
-              <ul class="service-list">
-                <li>
-                  <a href="/services/asphalt-paving/installation.html"
-                    >Installation</a
-                  >
-                </li>
-                <li>
-                  <a href="/services/asphalt-paving/extension.html"
-                    >Extension</a
-                  >
-                </li>
-                <li>
-                  <a href="/services/sealer/sealcoating.html"
-                    >Sealcoating</a
-                  >
-                </li>
-                <li>
-                  <a href="/services/sealer/crack-filling.html"
-                    >Crack Filling</a
-                  >
-                </li>
-                <li>
-                  <a href="/services/concrete/sidewalks.html">Sidewalks</a>
-                </li>
-                <li>
-                  <a href="/services/pavers/belgium-blocks.html"
-                    >Belgium Blocks</a
-                  >
-                </li>
-                <li>
-                  <a href="/services/concrete/walkways.html">Walkways</a>
-                </li>
-              </ul>
+            <div class="right-area">
+              <span
+                ><a>Terms and Conditions</a>
+                <span style="margin: 0 8px">|</span>
+                <a>Privacy Policy</a>
+              </span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="small-container">
-      <div class="footer-bottom pt-30 pb-30">
-        <div class="left-area">
-          <span>
-            Copyright &copy; <span id="current-year"></span>, All rights
-            reserved. Designed by
-            <a href="https://www.mdgtlab.com" target="_blank"
-              >Isra Martinez</a
-            >
-          </span>
-        </div>
-        <div class="right-area">
-          <span
-            ><a>Terms and Conditions</a>
-            <span style="margin: 0 8px">|</span>
-            <a>Privacy Policy</a>
-          </span>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-<!-- Footer area end -->
+    </footer>
+    <!-- Footer area end -->
 
   <!-- Tus scripts principales -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
@@ -1006,39 +1039,65 @@
 
   <!-- Inicializaciones -->
   <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Contact Form
-      const contactForm = document.getElementById("contactForm");
-      const formMessage = document.getElementById("formMessage");
-
-      if (contactForm) {
-        contactForm.addEventListener("submit", async (e) => {
-          e.preventDefault();
-          try {
-            const response = await fetch(contactForm.action, {
-              method: "POST",
-              body: new FormData(contactForm),
-              headers: {
-                Accept: "application/json",
-              },
-            });
-
-            if (response.ok) {
-              formMessage.textContent =
-                "Thank you for your message! We'll get back to you soon.";
-              formMessage.style.color = "#FFFFFF";
-              formMessage.style.fontWeight = "bold";
-              formMessage.style.fontSize = "1.2em";
-              contactForm.reset();
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contactForm');
+      const successMessageDiv = document.getElementById('successMessage');
+  
+      if (form && successMessageDiv) {
+        form.addEventListener('submit', function (event) {
+          event.preventDefault();
+  
+          // Validación básica de campos requeridos
+          const requiredFields = form.querySelectorAll('[required]');
+          let isValid = true;
+  
+          requiredFields.forEach(function (field) {
+            if (!field.value.trim()) {
+              isValid = false;
+              // field.classList.add('is-invalid'); // Opcional
             } else {
-              throw new Error("Form submission failed");
+              // field.classList.remove('is-invalid'); // Opcional
             }
-          } catch (error) {
-            formMessage.textContent =
-              "Sorry, there was an error submitting your message. Please try again.";
-            formMessage.style.color = "yellow";
+          });
+  
+          if (!isValid) {
+            alert('Please fill in all required fields.');
+            return;
           }
-          formMessage.style.display = "block";
+  
+          const formData = new FormData(form);
+  
+          fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+              'Accept': 'application/json'
+            }
+          })
+            .then(function (response) {
+              if (response.ok) {
+                form.reset();
+                // ✅ NO ocultamos el formulario
+                successMessageDiv.innerText = "✅ Thank you! Your message has been sent. We will contact you shortly.";
+                successMessageDiv.style.display = 'block';
+                successMessageDiv.style.color = '#28a745'; // verde éxito
+                successMessageDiv.style.fontWeight = 'bold';
+                successMessageDiv.style.fontSize = '1.1em';
+  
+                // Opcional: recargar en 10 segundos
+                setTimeout(function () {
+                  window.location.reload();
+                }, 10000);
+              } else {
+                throw new Error('Submission failed');
+              }
+            })
+            .catch(function (error) {
+              console.error('Error:', error);
+              successMessageDiv.innerText = "❌ There was a problem submitting your form. Please try again later.";
+              successMessageDiv.style.display = 'block';
+              successMessageDiv.style.color = '#dc3545'; // rojo error
+            });
         });
       }
     });

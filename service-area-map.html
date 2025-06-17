@@ -1,48 +1,73 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Area Map | MAC Paving and Sealcoating NJ</title>
-    <meta name="description" content="View the service area map for MAC Paving and Sealcoating LLC. We proudly serve homeowners across Passaic, Bergen, Essex, Morris, and surrounding counties in New Jersey.">
-    <!-- Incluir CSS de Leaflet desde un CDN -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-    <!-- Estilos para el mapa -->
-    <style>
-        body {
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="format-detection" content="telephone=no">
+  <title>Service Area Map | MAC Paving and Sealcoating NJ</title>
+  <!-- Preconexión para recursos externos (mejora rendimiento) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <meta name="description" content="View the service area map for MAC Paving and Sealcoating LLC. We proudly serve homeowners across Passaic, Bergen, Essex, Morris, and surrounding counties in New Jersey.">
+  <link rel="canonical" href="https://macpavingandsealcoating.com/service-area-map.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="keywords"
+    content="concrete services NJ, walkway construction NJ, sidewalk construction NJ, concrete curbs NJ, aprons NJ, residential concrete NJ, commercial concrete NJ, concrete driveway NJ, concrete installation NJ, concrete repair NJ, concrete contractors NJ, concrete paving NJ, MAC Paving and Sealcoating NJ, sidewalks NJ, curbs nj, aprons nj" />
+
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+
+        <style>
+          html, body {
             margin: 0;
             padding: 0;
-            font-family: sans-serif;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-        }
-        #map {
             height: 100%;
             width: 100%;
-            flex-grow: 1;
-        }
-        .info-panel {
-            padding: 15px;
+            overflow: hidden;
+            font-family: sans-serif;
+          }
+        
+          .info-panel {
+            padding: 10px;
             background-color: white;
             border-bottom: 1px solid #ddd;
             text-align: center;
-        }
-        h1 {
+          }
+        
+          h1 {
             margin: 0 0 10px 0;
-            font-size: 1.5em;
-        }
-    </style>
+            font-size: 1.3em;
+          }
+        
+          #map {
+            height: 100vh;
+    width: 100vw;
+          }
+        
+          /* Ocultar por defecto */
+          .info-panel.hidden {
+            display: none;
+          }
+        </style>
 </head>
+
 <body>
 
   <div class="info-panel">
     <h1>MAC Paving and Sealcoating LLC – Residential Driveway Service Areas</h1>
     <p>We proudly serve homeowners in <strong>Passaic, Bergen, Essex, Morris, Middlesex, Union, Somerset, Hudson, and Sussex</strong> counties across Northern New Jersey.</p>
   </div>
-    
+  <script>
+    // Detecta si está dentro de un iframe
+    if (window.self !== window.top) {
+      document.querySelector('.info-panel')?.classList.add('hidden');
+      document.querySelector('#map').style.height = '100%';
+    }
+  </script>
     <!-- Contenedor del mapa -->
     <div id="map"></div>
 
@@ -74,7 +99,13 @@
         const highlightedCounties = ["Passaic", "Bergen", "Essex", "Morris", "Middlesex", "Hudson",  "Union", "Somerset", "Sussex"];
 
         // Inicializar el mapa y centrarlo en Nueva Jersey
-        const map = L.map('map').setView([40.4, -74.5], 8);
+        const map = L.map('map', {
+          zoomControl: true,
+          scrollWheelZoom: false,
+          doubleClickZoom: false,
+          touchZoom: false,
+          dragging: true
+        }).setView([40.4, -74.5], 8);
 
         // Añadir una capa de teselas (mapa base) de OpenStreetMap
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -135,7 +166,19 @@
             style: style,
             onEachFeature: onEachFeature
         }).addTo(map);
+        setTimeout(() => {
+          map.invalidateSize();
+        }, 300);
+        // Crear un grupo solo con los condados resaltados
+const highlightedGroup = L.geoJson(njCountiesData, {
+  filter: feature => highlightedCounties.includes(feature.properties.name)
+});
 
+// Ajustar el mapa para que enfoque esos condados
+map.fitBounds(highlightedGroup.getBounds(), {
+  padding: [20, 20],  // espacio alrededor
+  maxZoom: 10         // evita que se acerque demasiado
+});
     </script>
 </body>
 </html>
